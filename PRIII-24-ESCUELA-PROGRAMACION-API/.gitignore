@@ -1,0 +1,79 @@
+# Build Folders (objetos binarios y temporales)
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# ASP.NET Scaffolding
+.scaffolding
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+# MSBuild
+*.pidb
+*.ilk
+*.pdb
+*.mdb
+*.opendb
+*.log
+*.sdf
+*.ldf
+*.idb
+
+# Rider
+.idea/
+.idea_modules/
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio Code files
+.vscode/*
+.vscode/test.code-workspace
+
+# Local History for Visual Studio
+.localhistory/
+
+# User-specific NuGet files
+*.nuget.targets
+*.nuget.props
+
+# Windows crash reports
+*.wer
+
+# IIS generated files
+*.log
+
+# DotNetCli built binaries
+.dotnet/
+
+# Publish outputs
+publish/
+
+# Temp files
+*.tmp
+*.temp
