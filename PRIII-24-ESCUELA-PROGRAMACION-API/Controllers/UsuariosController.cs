@@ -21,7 +21,8 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
         {
-            return await _context.Usuarios.ToListAsync();
+            var usuarios = await _context.Usuarios.ToListAsync();
+            return Ok(usuarios);
         }
 
         // GET: api/Usuarios/5
@@ -47,6 +48,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
                 return BadRequest("El idUsuario no corresponde a un usuario válido.");
             }
 
+            usuario.fecha_Registro = DateTime.Now;
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
 
