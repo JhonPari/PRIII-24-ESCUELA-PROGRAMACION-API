@@ -21,8 +21,20 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
         {
-            var usuarios = await _context.Usuarios.ToListAsync();
-            return Ok(usuarios);
+            return await _context.Usuarios.ToListAsync();
+        }
+
+        // GET: api/Usuarios
+        [HttpGet("Estudiantes")]
+        public async Task<ActionResult<IEnumerable<Usuario>>> GetEstudiantes()
+        {
+            return await _context.Usuarios.Where(x => x.Estado == 'A' && x.Rol == 'E').ToListAsync();
+        }
+        // GET: api/Docentes
+        [HttpGet("Docentes")]
+        public async Task<ActionResult<IEnumerable<Usuario>>> GetDocentes()
+        {
+            return await _context.Usuarios.Where(x => x.Estado == 'A' && x.Rol == 'D').ToListAsync();
         }
 
         // GET: api/Usuarios/5
@@ -83,23 +95,33 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok();
         }
 
         // DELETE: api/Usuarios/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(uint id)
         {
-            var usuario = await _context.Usuarios.FindAsync(id);
+            Usuario? usuario = await _context.Usuarios.FindAsync(id);
             if (usuario == null)
             {
-                return NotFound();
+                return BadRequest();
             }
 
-            _context.Usuarios.Remove(usuario);
-            await _context.SaveChangesAsync();
+            usuario.fecha_Actualizacion = DateTime.Now;
+            usuario.Estado = 'I';
+            _context.Entry(usuario).State = EntityState.Modified;
 
-            return NoContent();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+
+            return Ok();
         }
 
         private bool UsuarioExists(uint id)
