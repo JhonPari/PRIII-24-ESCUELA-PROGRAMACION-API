@@ -36,9 +36,21 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
         {
             return await _context.Usuarios.Where(x => x.Estado == 'A' && x.Rol == 'D').ToListAsync();
         }
+		// GET: api/listaPendienteDocentes
+		[HttpGet("listaPendienteDocentes")]
+		public async Task<ActionResult<IEnumerable<Usuario>>> GetListaPendientesDocente()
+		{
+			return await _context.Usuarios.Where(x => x.Estado == 'A' && x.Rol == 'D' && x.Solicitud == 'P').ToListAsync();
+		}
+		// GET: api/listaPendienteEstudiante
+		[HttpGet("listaPendienteEstudiante")]
+		public async Task<ActionResult<IEnumerable<Usuario>>> GetListaPendientesEstudiantes()
+		{
+			return await _context.Usuarios.Where(x => x.Estado == 'A' && x.Rol == 'E' && x.Solicitud == 'P').ToListAsync();
+		}
 
-        // GET: api/Usuarios/5
-        [HttpGet("{id}")]
+		// GET: api/Usuarios/5
+		[HttpGet("{id}")]
         public async Task<ActionResult<Usuario>> GetUsuario(uint id)
         {
             var usuario = await _context.Usuarios.FindAsync(id);
@@ -55,11 +67,6 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
         [HttpPost]
         public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
-            if (!_context.Usuarios.Any(u => u.Id == usuario.IdUsuario))
-            {
-                return BadRequest("El idUsuario no corresponde a un usuario válido.");
-            }
-
             usuario.fecha_Registro = DateTime.Now;
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
@@ -98,8 +105,40 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             return Ok();
         }
 
-        // DELETE: api/Usuarios/5
-        [HttpDelete("{id}")]
+		// PUT: api/Usuarios/archivarSolicitud/5
+		[HttpPut("archivarSolicitud/{id}")]
+		public async Task<IActionResult> ArchivarSolicitud(uint id)
+		{
+			var usuario = await _context.Usuarios.FindAsync(id);
+			if (usuario == null)
+			{
+				return NotFound();
+			}
+
+			usuario.Solicitud = 'A';
+			usuario.fecha_Actualizacion = DateTime.Now;
+			_context.Entry(usuario).State = EntityState.Modified;
+
+			try
+			{
+				await _context.SaveChangesAsync();
+			}
+			catch (DbUpdateConcurrencyException)
+			{
+				if (!UsuarioExists(id))
+				{
+					return NotFound();
+				}
+				else
+				{
+					throw;
+				}
+			}
+
+			return Ok();
+		}
+		// DELETE: api/Usuario/5
+		[HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(uint id)
         {
             Usuario? usuario = await _context.Usuarios.FindAsync(id);
@@ -124,7 +163,8 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             return Ok();
         }
 
-        private bool UsuarioExists(uint id)
+
+		private bool UsuarioExists(uint id)
         {
             return _context.Usuarios.Any(e => e.Id == id);
         }
