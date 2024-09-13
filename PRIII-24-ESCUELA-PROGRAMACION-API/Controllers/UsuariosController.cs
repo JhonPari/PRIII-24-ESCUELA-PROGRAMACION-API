@@ -108,7 +108,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 		// PUT: api/Usuarios/archivarSolicitud/5
 		[HttpPut("archivarSolicitud/{id}")]
 		public async Task<IActionResult> ArchivarSolicitud(uint id)
-		{
+		{    //este es para aceptar la verificacion diego :3
 			var usuario = await _context.Usuarios.FindAsync(id);
 			if (usuario == null)
 			{
