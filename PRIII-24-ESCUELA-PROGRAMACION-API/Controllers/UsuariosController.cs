@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Data;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Models;
+using PRIII_24_ESCUELA_PROGRAMACION_API.Models.Others;
 
 namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 {
@@ -163,8 +164,24 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             return Ok();
         }
 
+        // PUT: api/Usuarios/5
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login(LoginRequest login)
+        {
+            //falta cifrar y descifrar
+            Usuario? usuario = _context.Usuarios.FirstOrDefault(x => x.Correo == login.Correo && x.Contrasenia == login.Contrasenia && x.Estado == 'A');
 
-		private bool UsuarioExists(uint id)
+            if (usuario == null) return NotFound();
+
+            return Ok(new
+            {
+                id = usuario.Id,
+                name = usuario.Nombre,
+                role = usuario.Rol
+            });
+        }
+
+        private bool UsuarioExists(uint id)
         {
             return _context.Usuarios.Any(e => e.Id == id);
         }
