@@ -14,7 +14,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
-
+		public DbSet<Escuela> escuela { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -30,6 +30,15 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
 
                 entity.Property(e => e.Solicitud)
                     .HasDefaultValue('P'); // Valor por defecto 'P'
+            });
+            // Configuración para la entidad Escuela
+            modelBuilder.Entity<Escuela>(entity =>
+            {
+                // Configurar clave primaria
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Estado)
+                    .HasDefaultValue('A'); // Valor por defecto 'A'
             });
         }
     }
