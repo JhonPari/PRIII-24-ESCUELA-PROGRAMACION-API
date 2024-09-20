@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+
 namespace PRIII_24_ESCUELA_PROGRAMACION_API.Models
 {
     [Table("Usuario")]
@@ -41,6 +42,12 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Models
         [Required]
         [DefaultValue('P')]  //'A', 'R'
         [Description("P,A,R")]
-        public char Solicitud { get; set; } = 'P';  
+        public char Solicitud { get; set; } = 'P';
+        
+
+
+
+
+
     }
 }

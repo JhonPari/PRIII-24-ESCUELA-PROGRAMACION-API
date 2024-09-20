@@ -181,9 +181,28 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             });
         }
 
+
         private bool UsuarioExists(uint id)
         {
             return _context.Usuarios.Any(e => e.Id == id);
         }
+        [HttpPost("RecuperarContrasenia")]
+        public async Task<IActionResult> RecuperarContrasenia(RecuperaContrasenia request)
+        {
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Correo == request.Correo && x.Estado == 'A');
+
+            if (usuario == null)
+            {
+                return NotFound("El correo electrónico no está registrado o el usuario no está activo.");
+            }
+
+            // Generar token de recuperación (puede ser un GUID o cualquier otro método de generación de tokens)
+            var token = Guid.NewGuid().ToString();
+
+           
+            return Ok("Se ha enviado un correo electrónico con las instrucciones para recuperar su contraseña.");
+        }
+
+
     }
 }
