@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Models;
+using PRIII_24_ESCUELA_PROGRAMACION_API.Models.Others;
 
 namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
 {
@@ -15,6 +16,9 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
 
         public DbSet<Usuario> Usuarios { get; set; }
 		public DbSet<Escuela> escuela { get; set; }
+        public DbSet<Competencia> competencia { get; set; }
+        public DbSet<Calificacion> calificacion { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -40,6 +44,19 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
                 entity.Property(e => e.Estado)
                     .HasDefaultValue('A'); // Valor por defecto 'A'
             });
+        }
+
+        public async Task<List<CalificacionCompetencia>> CompetenciasEst(int idEstudiante)
+        {
+            return await (from c in competencia
+                          join ca in calificacion on c.Id equals ca.idCompentencia
+                          where ca.IdEstudiante == idEstudiante
+                          select new CalificacionCompetencia
+                          {
+                              Titulo = c.Titulo,
+                              FechaInicio = c.Fecha_Inicio,
+                              Aprobado = ca.Aprobado
+                          }).ToListAsync();
         }
     }
 }
