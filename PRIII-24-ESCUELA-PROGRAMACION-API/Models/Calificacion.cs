@@ -2,10 +2,13 @@
 {
     public class Calificacion
     {
-        public int Id { get; set; }
-        public int idCompentencia { get; set; }
-        public Competencia Competencia { get; set; }
-        public int IdEstudiante { get; set; }
-        public UInt16 Aprobado { get; set; }
-    }
+		public int Id { get; set; }
+		public int IdCompetencia { get; set; }
+		public UInt32 IdEstudiante { get; set; }
+		public string? Prueba_Estudiante { get; set; }
+		public UInt16 Aprobado { get; set; }
+		public int IdCalificador { get; set; }
+		public Usuario Estudiante { get; set; }
+		public Competencia Competencia { get; set; }
+	}
 }

@@ -44,12 +44,21 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
                 entity.Property(e => e.Estado)
                     .HasDefaultValue('A'); // Valor por defecto 'A'
             });
-        }
+			modelBuilder.Entity<Calificacion>()
+			   .HasOne(c => c.Competencia)
+			   .WithMany(c => c.Calificaciones)
+			   .HasForeignKey(c => c.IdCompetencia);
+
+			modelBuilder.Entity<Calificacion>()
+				.HasOne(c => c.Estudiante)
+				.WithMany() // Assuming Estudiante does not have a collection of Calificaciones
+				.HasForeignKey(c => c.IdEstudiante);
+		}
 
         public async Task<List<CalificacionCompetencia>> CompetenciasEst(int idEstudiante)
         {
             return await (from c in competencia
-                          join ca in calificacion on c.Id equals ca.idCompentencia
+                          join ca in calificacion on c.Id equals ca.IdCompetencia
                           where ca.IdEstudiante == idEstudiante
                           select new CalificacionCompetencia
                           {
