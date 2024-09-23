@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\controllers\\cslificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\calificaciono\\competencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\calificaciono\\competencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\controllers\\competenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\controllers\\competenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +19,12 @@
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\calificaciono\\calificaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\calificaciono\\calificaraprobado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\calificaciono\\calificaraprobado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\calificaciono\\calificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\calificaciono\\calificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\calificaciono\\competencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\calificaciono\\competencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\calificaciono\\calificaraprobado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\calificaciono\\calificaraprobado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\escuela.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,8 +66,7 @@
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Escuela.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T23:52:39.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T23:52:39.162Z"
             },
             {
               "$type": "Document",
@@ -77,14 +76,13 @@
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\Calificacion.cs",
               "ToolTip": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\Calificacion.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\Calificacion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T23:51:51.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T23:51:51.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CalificacionDto.cs",
               "DocumentMoniker": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\CalificacionDto.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\CalificacionDto.cs",
@@ -92,12 +90,11 @@
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\CalificacionDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T23:45:37.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T23:45:37.946Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CalificarAprobado.cs",
               "DocumentMoniker": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\CalificarAprobado.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\CalificarAprobado.cs",
@@ -105,8 +102,7 @@
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\CalificarAprobado.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T23:45:36.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T23:45:36.566Z"
             },
             {
               "$type": "Document",
@@ -116,27 +112,27 @@
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CslificacionController.cs",
               "ToolTip": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CslificacionController.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CslificacionController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAuwEkAAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T23:39:47.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Competencia.cs",
               "DocumentMoniker": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\Competencia.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\Competencia.cs",
               "ToolTip": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\Competencia.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\CalificacionO\\Competencia.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T23:38:33.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CompetenciaController.cs",
               "DocumentMoniker": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CompetenciaController.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CompetenciaController.cs",
@@ -144,8 +140,7 @@
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CompetenciaController.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T23:39:51.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T23:39:51.81Z"
             },
             {
               "$type": "Document",
@@ -157,8 +152,7 @@
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Data\\DbEscuelasContext.cs",
               "ViewState": "AQIAAC8AAAAAAAAAAAAwwAEAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T23:38:15.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-22T23:38:15.262Z"
             }
           ]
         },
