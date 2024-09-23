@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Data;
-using PRIII_24_ESCUELA_PROGRAMACION_API.Models.Calificacion;
+using PRIII_24_ESCUELA_PROGRAMACION_API.Models.CalificacionO;
 
 namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 {

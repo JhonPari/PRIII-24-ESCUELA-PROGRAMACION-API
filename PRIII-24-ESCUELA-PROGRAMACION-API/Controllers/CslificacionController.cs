@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Data;
-using PRIII_24_ESCUELA_PROGRAMACION_API.Models.Calificacion;
+using PRIII_24_ESCUELA_PROGRAMACION_API.Models.CalificacionO;
 
 namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 {
@@ -23,29 +23,29 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             try
             {
                 var calificaciones = await _context.Calificacion.ToListAsync();
-                // Maneja el caso en que no hay datos si es necesario
+                
                 if (calificaciones == null || !calificaciones.Any())
                 {
-                    return NotFound("No calificaciones found.");
+                    return NotFound("No hay caificaciones.");
                 }
                 return Ok(calificaciones);
             }
             catch (Exception ex)
             {
-                // Manejo de errores mejorado
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+               
+                return StatusCode(500, $"Error: {ex.Message}");
             }
         }
         [HttpGet("with-student-info")]
-        public async Task<ActionResult<IEnumerable<CalificacionEstudianteDto>>> GetCalificacionesConEstudiante()
+        public async Task<ActionResult<IEnumerable<CalificacionDto>>> GetCalificacionesConEstudiante()
         {
             try
             {
                 var calificaciones = await _context.Calificacion
                     .Include(c => c.Estudiante)
-                    .Select(c => new CalificacionEstudianteDto
+                    .Select(c => new CalificacionDto
                     {
-                        id = c.Id,
+                        Id = c.Id,
                         Nombre = c.Estudiante.Nombre,
                         Correo = c.Estudiante.Correo,
                         Aprobado = c.Aprobado
@@ -56,8 +56,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             }
             catch (Exception ex)
             {
-                // Manejo de errores
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                return StatusCode(500, $"Error: {ex.Message}");
             }
         }
         [HttpGet("{id}")]
@@ -83,16 +82,11 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             return Ok(calificacionDto);
         }
 
-        public class CalificacionDto
-        {
-            public int Id { get; set; }
-            public string CompetenciaTitulo { get; set; }
-            public string EstudianteNombre { get; set; }
-        }
+       
         [HttpPut("{id}/Calificar")]
-        public async Task<IActionResult> UpdateCalificacion(int id, [FromBody] UpdateCalificacionDto updateDto)
+        public async Task<IActionResult> UpdateCalificacion(int id, [FromBody] CalificarAprobado calificacionUpdate)
         {
-            if (id != updateDto.Id)
+            if (id != calificacionUpdate.Id)
             {
                 return BadRequest("ID mismatch");
             }
@@ -104,7 +98,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
                 return NotFound();
             }
 
-            calificacion.Aprobado = updateDto.Aprobado;
+            calificacion.Aprobado = calificacionUpdate.Aprobado;
 
             try
             {
@@ -130,11 +124,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             return _context.Calificacion.Any(e => e.Id == id);
         }
 
-        public class UpdateCalificacionDto
-        {
-            public int Id { get; set; }
-            public int Aprobado { get; set; }
-        }
+       
 
 
 

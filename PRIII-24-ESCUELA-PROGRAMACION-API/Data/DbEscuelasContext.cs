@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Models;
-using PRIII_24_ESCUELA_PROGRAMACION_API.Models.Calificacion;
+using PRIII_24_ESCUELA_PROGRAMACION_API.Models.CalificacionO;
 
 namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
 {
@@ -45,23 +45,17 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
                     .HasDefaultValue('A'); // Valor por defecto 'A'
             });
 
-            
+
 
             modelBuilder.Entity<Calificacion>()
-             .HasOne(c => c.Estudiante)
-             .WithMany()
-             .HasForeignKey(c => c.IdEstudiante);
-
-            modelBuilder.Entity<Calificacion>()
-           .HasOne(c => c.Competencia)
-           .WithMany() // Asumiendo que no hay una colección inversa
-           .HasForeignKey(c => c.IdCompetencia);
+               .HasOne(c => c.Competencia)
+               .WithMany(c => c.Calificaciones)
+               .HasForeignKey(c => c.IdCompetencia);
 
             modelBuilder.Entity<Calificacion>()
                 .HasOne(c => c.Estudiante)
-                .WithMany() // Asumiendo que no hay una colección inversa
+                .WithMany() // Assuming Estudiante does not have a collection of Calificaciones
                 .HasForeignKey(c => c.IdEstudiante);
-
 
 
 

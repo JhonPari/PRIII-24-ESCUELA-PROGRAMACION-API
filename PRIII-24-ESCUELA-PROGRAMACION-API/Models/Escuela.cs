@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using PRIII_24_ESCUELA_PROGRAMACION_API.Models. Calificacion;
 
 namespace PRIII_24_ESCUELA_PROGRAMACION_API.Models
 {
