@@ -49,6 +49,25 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 		{
 			return await _context.Usuarios.Where(x => x.Estado == 'A' && x.Rol == 'E' && x.Solicitud == 'P').ToListAsync();
 		}
+		// GET: api/ReporteEstudiantes
+		[HttpGet("EstudiantesReporte")]
+		public async Task<ActionResult<IEnumerable<object>>> GetEstudiantesReporte()
+		{
+			var reporteEstudiantes = await (from u in _context.Usuarios
+											join cal in _context.calificacion on u.Id equals cal.IdEstudiante
+											join cmp in _context.competencia on cal.IdCompetencia equals cmp.Id
+											where u.Estado == 'A' && u.Rol == 'E'
+											group cmp by new { u.Nombre, u.Correo } into estudianteGrupo
+											select new
+											{
+												Nombre_Estudiante = estudianteGrupo.Key.Nombre,
+												Correo_Estudiante = estudianteGrupo.Key.Correo,
+												Total_Puntos = estudianteGrupo.Sum(cmp => cmp.Puntos)
+											}).ToListAsync();
+
+			return Ok(reporteEstudiantes);
+		}
+
 
 		// GET: api/Usuarios/5
 		[HttpGet("{id}")]
