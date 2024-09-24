@@ -54,18 +54,5 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
 				.WithMany() // Assuming Estudiante does not have a collection of Calificaciones
 				.HasForeignKey(c => c.IdEstudiante);
 		}
-
-        public async Task<List<CalificacionCompetencia>> CompetenciasEst(int idEstudiante)
-        {
-            return await (from c in competencia
-                          join ca in calificacion on c.Id equals ca.IdCompetencia
-                          where ca.IdEstudiante == idEstudiante
-                          select new CalificacionCompetencia
-                          {
-                              Titulo = c.Titulo,
-                              FechaInicio = c.Fecha_Inicio,
-                              Aprobado = ca.Aprobado
-                          }).ToListAsync();
-        }
     }
 }
