@@ -33,13 +33,15 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 				return StatusCode(500, $"Error: {ex.Message}");
 			}
 		}
-		[HttpGet("with-student-info")]
-		public async Task<ActionResult<IEnumerable<CalificacionDto>>> GetCalificacionesConEstudiante()
+
+		[HttpGet("FiltrarEstudiante/{competenciaId}")]
+		public async Task<ActionResult<IEnumerable<CalificacionDto>>> GetCalificacionesConEstudiante(int competenciaId)
 		{
 			try
 			{
 				var calificaciones = await _context.calificacion
 					.Include(c => c.Estudiante)
+					.Where(c => c.IdCompetencia == competenciaId)
 					.Select(c => new CalificacionDto
 					{
 						Id = c.Id,
@@ -56,6 +58,31 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 				return StatusCode(500, $"Error: {ex.Message}");
 			}
 		}
+
+		//[HttpGet("with-student-info")]
+		//public async Task<ActionResult<IEnumerable<CalificacionDto>>> GetCalificacionesConEstudiante()
+		//{
+		//    try
+		//    {
+		//        var calificaciones = await _context.Calificacion
+		//            .Include(c => c.Estudiante)
+		//            .Select(c => new CalificacionDto
+		//            {
+		//                Id = c.Id,
+		//                Nombre = c.Estudiante.Nombre,
+		//                Correo = c.Estudiante.Correo,
+		//                Aprobado = c.Aprobado
+		//            })
+		//            .ToListAsync();
+
+		//        return Ok(calificaciones);
+		//    }
+		//    catch (Exception ex)
+		//    {
+		//        return StatusCode(500, $"Error: {ex.Message}");
+		//    }
+		//}
+
 		[HttpGet("{id}")]
 		public async Task<ActionResult<CalificacionDto>> GetCalificacion(int id)
 		{
@@ -78,7 +105,6 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 
 			return Ok(calificacionDto);
 		}
-
 
 		[HttpPut("{id}/Calificar")]
 		public async Task<IActionResult> UpdateCalificacion(int id, [FromBody] CalificarAprobado calificacionUpdate)
@@ -120,6 +146,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 		{
 			return _context.calificacion.Any(e => e.Id == id);
 		}
+
 
 
 	}

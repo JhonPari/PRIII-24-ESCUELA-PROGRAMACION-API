@@ -4,6 +4,7 @@
     {
         public int Id { get; set; }
         public string Titulo { get; set; }
+        public string Descripcion { get; set; } 
         public int Puntos { get; set; }
         public DateTime Fecha_Inicio { get; set; }
         public DateTime Fecha_Fin { get; set; }
