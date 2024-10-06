@@ -15,6 +15,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 		}
 
 		[HttpGet]
+		//karen
 		public async Task<ActionResult<IEnumerable<Calificacion>>> GetCalificaciones()
 		{
 			try
@@ -23,7 +24,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 
 				if (calificaciones == null || !calificaciones.Any())
 				{
-					return NotFound("No hay caificaciones.");
+					return NotFound("No hay caificaciones en esta competencias.");
 				}
 				return Ok(calificaciones);
 			}
