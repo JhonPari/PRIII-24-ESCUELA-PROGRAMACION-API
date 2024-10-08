@@ -1,27 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Graph;
-using Microsoft.Identity.Client;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Data;
-using PRIII_24_ESCUELA_PROGRAMACION_API.Models.Others;
 
 var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-
-var clientId = builder.Configuration.GetSection("ImagenesOneDrive")["clientId"];
-var tenantId = builder.Configuration.GetSection("ImagenesOneDrive")["tenantId"];
-var clientSecret = builder.Configuration.GetSection("ImagenesOneDrive")["clientSecret"];
-
-builder.Services.AddSingleton<GraphServiceClient>(sp =>
-{
-    var confidentialClient = ConfidentialClientApplicationBuilder.Create(clientId)
-        .WithClientSecret(clientSecret)
-        .WithTenantId(tenantId)
-        .Build();
-
-    return new GraphServiceClient(new CustomAuthenticationProvider(confidentialClient));
-});
-
 
 // Add services to the container.
 builder.Services.AddDbContext<DbEscuelasContext>(options =>

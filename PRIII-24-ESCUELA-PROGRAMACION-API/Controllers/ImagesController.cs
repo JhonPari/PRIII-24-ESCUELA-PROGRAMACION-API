@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Graph;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Data;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Models;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Models.Others;
@@ -11,12 +10,10 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
     [Route("[controller]")]
     public class ImagesController : Controller
     {
-        private readonly GraphServiceClient _graphClient;
         private readonly DbEscuelasContext _context;
 
-        public ImagesController(GraphServiceClient graphClient, DbEscuelasContext context)
+        public ImagesController(DbEscuelasContext context)
         {
-            _graphClient = graphClient;
             _context = context;
         }
 
@@ -24,11 +21,14 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
         public async Task<IActionResult> SubirPrueba([FromForm] SubirImagen imagenSubida)
         {
             var calificacion = await _context.calificacion.FirstOrDefaultAsync(x => x.IdCompetencia == imagenSubida.idCompetencia && x.IdEstudiante == imagenSubida.idEstudiante);
-
             if (calificacion == null)
                 return NotFound();
 
-            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png"};
+            var imagen = await _context.Imagen.FirstOrDefaultAsync(x => x.idCalificacion == calificacion.Id);
+            if (imagen != null)
+                return BadRequest("Ya se subio una imagen anteriormente");
+
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
             var extension = Path.GetExtension(imagenSubida.imagen.FileName).ToLower();
 
             if (!allowedExtensions.Contains(extension))
@@ -36,34 +36,28 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
                 return BadRequest("Formato de imagen no permitido.");
             }
 
-            string? ImgUrl = await SubirImagen(imagenSubida.imagen);
+            Imagen img = new Imagen
+            {
+                idCalificacion = calificacion.Id,
+                nombre = $"{Guid.NewGuid()}{Path.GetExtension(imagenSubida.imagen.FileName)}",
+                archivo = await ToBytesAsync(imagenSubida.imagen)
+            };
 
-            if (ImgUrl == null)
-                return BadRequest("Debe proporcionar una imagen.");
-
-            calificacion.Prueba_Estudiante = ImgUrl;
-            _context.calificacion.Update(calificacion);
+            _context.Imagen.Add(img);
             await _context.SaveChangesAsync();
 
             return Ok();
         }
 
-        private async Task<string?> SubirImagen(IFormFile imagen)
+        private async Task<byte[]> ToBytesAsync(IFormFile img)
         {
-            if (imagen == null || imagen.Length == 0)
-                return null;
-
-            var nombreUnico = $"{Guid.NewGuid()}{Path.GetExtension(imagen.FileName)}";
-
-            using (var stream = imagen.OpenReadStream())
+            // Leer el contenido del archivo en un MemoryStream
+            using (var memoryStream = new MemoryStream())
             {
-                var uploadedFile = await _graphClient.Drive.Special.AppRoot
-                    .ItemWithPath(nombreUnico)
-                    .Content
-                    .Request()
-                    .PutAsync<DriveItem>(stream);
+                await img.CopyToAsync(memoryStream);
+                var fileBytes = memoryStream.ToArray(); // Aquí obtienes los bytes del archivo
 
-                return uploadedFile.WebUrl;
+                return fileBytes;
             }
         }
     }
