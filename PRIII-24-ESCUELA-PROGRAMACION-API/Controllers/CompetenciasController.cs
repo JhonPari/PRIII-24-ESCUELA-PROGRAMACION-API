@@ -54,6 +54,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
                                       select new CalificacionCompetencia
                                       {
                                           Titulo = c.Titulo,
+                                          //prueba_Estudiante = ca.Prueba_Estudiante,
                                           FechaInicio = c.Fecha_Inicio,
                                           Aprobado = ca.Aprobado
                                       }).ToListAsync();

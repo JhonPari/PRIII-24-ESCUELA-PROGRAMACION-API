@@ -18,6 +18,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
 		public DbSet<Escuela> escuela { get; set; }
         public DbSet<Competencia> competencia { get; set; }
         public DbSet<Calificacion> calificacion { get; set; }
+        public DbSet<Imagen> Imagen { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -44,7 +45,12 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
                 entity.Property(e => e.Estado)
                     .HasDefaultValue('A'); // Valor por defecto 'A'
             });
-			modelBuilder.Entity<Calificacion>()
+            modelBuilder.Entity<Imagen>(entity =>
+            {
+                // Configurar clave primaria
+                entity.HasKey(e => e.idCalificacion);
+            });
+            modelBuilder.Entity<Calificacion>()
 			   .HasOne(c => c.Competencia)
 			   .WithMany(c => c.Calificaciones)
 			   .HasForeignKey(c => c.IdCompetencia);
@@ -53,6 +59,6 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Data
 				.HasOne(c => c.Estudiante)
 				.WithMany() // Assuming Estudiante does not have a collection of Calificaciones
 				.HasForeignKey(c => c.IdEstudiante);
-		}
+        }
     }
 }

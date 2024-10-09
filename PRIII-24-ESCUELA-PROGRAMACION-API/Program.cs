@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Data;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
