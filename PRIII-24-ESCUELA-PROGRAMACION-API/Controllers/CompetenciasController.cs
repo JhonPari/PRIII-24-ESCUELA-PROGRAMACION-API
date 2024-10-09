@@ -53,10 +53,12 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
                                       where ca.IdEstudiante == idEstudiante
                                       select new CalificacionCompetencia
                                       {
+                                          Id = ca.Id,
                                           Titulo = c.Titulo,
                                           //prueba_Estudiante = ca.Prueba_Estudiante,
                                           FechaInicio = c.Fecha_Inicio,
-                                          Aprobado = ca.Aprobado
+                                          Aprobado = ca.Aprobado,
+                                          Imagen = ca.Imagen
                                       }).ToListAsync();
 
             if (competencias == null)
