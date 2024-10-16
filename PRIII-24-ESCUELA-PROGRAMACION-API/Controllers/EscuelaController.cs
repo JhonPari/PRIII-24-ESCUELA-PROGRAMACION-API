@@ -103,7 +103,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
                 return StatusCode(500, new { message = ex.Message });
             }
 
-            return NoContent();
+            return Ok();
         }
 
 
