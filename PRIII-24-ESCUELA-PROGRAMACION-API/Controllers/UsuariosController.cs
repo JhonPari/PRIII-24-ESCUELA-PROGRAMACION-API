@@ -210,7 +210,24 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 			});
 		}
 
-		private bool UsuarioExists(uint id)
+        [HttpGet("EstPoints/{idEst}")]
+        public async Task<IActionResult> GetPuntosAsync(uint idEst)
+        {
+            var puntos = await _context.competencia
+                    .Join(_context.calificacion,
+                        competencia => competencia.Id,
+                        calificacion => calificacion.IdCompetencia,
+                        (competencia, calificacion) => new { Competencia = competencia, Calificacion = calificacion })
+                    .Where(c => c.Calificacion.IdEstudiante == idEst && c.Calificacion.Aprobado == 1)
+                    .SumAsync(c => c.Competencia.Puntos);
+
+            return Ok(new
+            {
+                puntos
+            });
+        }
+
+        private bool UsuarioExists(uint id)
         {
             return _context.Usuarios.Any(e => e.Id == id);
         }
