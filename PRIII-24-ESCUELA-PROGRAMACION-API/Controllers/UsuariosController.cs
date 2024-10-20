@@ -52,6 +52,25 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 		{
 			return await _context.Usuarios.Where(x => x.Estado == 'A' && x.Rol == 'E' && x.Solicitud == 'P').ToListAsync();
 		}
+		// GET: api/ReporteEstudiantes
+		[HttpGet("EstudiantesReporte")]
+		public async Task<ActionResult<IEnumerable<object>>> GetEstudiantesReporte()
+		{
+			var reporteEstudiantes = await (from u in _context.Usuarios
+											join cal in _context.calificacion on u.Id equals cal.IdEstudiante
+											join cmp in _context.competencia on cal.IdCompetencia equals cmp.Id
+											where u.Estado == 'A' && u.Rol == 'E'
+											group cmp by new { u.Nombre, u.Correo } into estudianteGrupo
+											select new
+											{
+												Nombre_Estudiante = estudianteGrupo.Key.Nombre,
+												Correo_Estudiante = estudianteGrupo.Key.Correo,
+												Total_Puntos = estudianteGrupo.Sum(cmp => cmp.Puntos)
+											}).ToListAsync();
+
+			return Ok(reporteEstudiantes);
+		}
+
 
 		// GET: api/Usuarios/5
 		[HttpGet("{id}")]
@@ -108,75 +127,44 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 
             return Ok();
         }
-        [HttpPut("archivarSolicitud/{id}")]
-        public async Task<IActionResult> ArchivarSolicitud(uint id)
-        {
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
 
-            var nuevaContrasenia = GenerarContraseniaSegura();
-            usuario.Contrasenia = HashPassword(nuevaContrasenia);
-            usuario.Solicitud = 'A';
-            usuario.fecha_Actualizacion = DateTime.Now;
-            _context.Entry(usuario).State = EntityState.Modified;
+		[HttpPut("archivarSolicitud/{id}")]
+		public async Task<IActionResult> ArchivarSolicitud(uint id)
+		{
+			var usuario = await _context.Usuarios.FindAsync(id);
+			if (usuario == null)
+			{
+				return NotFound();
+			}
 
-            try
-            {
-                await _context.SaveChangesAsync();
-                // Enviar correo con la nueva contraseña
-                EnviarCorreo(usuario.Correo, nuevaContrasenia);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UsuarioExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+			var nuevaContrasenia = GenerarContraseniaSegura();
+			usuario.Contrasenia = HashPassword(nuevaContrasenia);
+			usuario.Solicitud = 'A';
+			usuario.fecha_Actualizacion = DateTime.Now;
+			_context.Entry(usuario).State = EntityState.Modified;
 
-            return Ok();
-        }
-        //// PUT: api/Usuarios/archivarSolicitud/5
-        //[HttpPut("archivarSolicitud/{id}")]
-        //public async Task<IActionResult> ArchivarSolicitud(uint id)
-        //{    //este es para aceptar la verificacion diego :3
-        //	var usuario = await _context.Usuarios.FindAsync(id);
-        //	if (usuario == null)
-        //	{
-        //		return NotFound();
-        //	}
+			try
+			{
+				await _context.SaveChangesAsync();
+				// Enviar correo con la nueva contraseña
+				EnviarCorreo(usuario.Correo, nuevaContrasenia);
+			}
+			catch (DbUpdateConcurrencyException)
+			{
+				if (!UsuarioExists(id))
+				{
+					return NotFound();
+				}
+				else
+				{
+					throw;
+				}
+			}
 
-        //	usuario.Solicitud = 'A';
-        //	usuario.fecha_Actualizacion = DateTime.Now;
-        //	_context.Entry(usuario).State = EntityState.Modified;
-
-        //	try
-        //	{
-        //		await _context.SaveChangesAsync();
-        //	}
-        //	catch (DbUpdateConcurrencyException)
-        //	{
-        //		if (!UsuarioExists(id))
-        //		{
-        //			return NotFound();
-        //		}
-        //		else
-        //		{
-        //			throw;
-        //		}
-        //	}
-
-        //	return Ok();
-        //}
-        // DELETE: api/Usuario/5
-        [HttpDelete("{id}")]
+			return Ok();
+		}
+		// DELETE: api/Usuario/5
+		[HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(uint id)
         {
             Usuario? usuario = await _context.Usuarios.FindAsync(id);
@@ -201,122 +189,144 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             return Ok();
         }
 
-        //// PUT: api/Usuarios/5
-        //[HttpPost("Login")]
-        //public async Task<IActionResult> Login(LoginRequest login)
-        //{
-        //    //falta cifrar y descifrar
-        //    Usuario? usuario = _context.Usuarios.FirstOrDefault(x => x.Correo == login.Correo && x.Contrasenia == login.Contrasenia && x.Estado == 'A');
-
-        //    if (usuario == null) return NotFound();
-
-        //    return Ok(new
-        //    {
-        //        id = usuario.Id,
-        //        name = usuario.Nombre,
-        //        role = usuario.Rol
-        //    });
-        //}
         // PUT: api/Usuarios/5
-        [HttpPost("Login")]
-        public async Task<IActionResult> Login(LoginRequest login)
+		[HttpPost("Login")]
+		public async Task<IActionResult> Login(LoginRequest login)
+		{
+			// Buscar el usuario por correo
+			Usuario? usuario = _context.Usuarios.FirstOrDefault(x => x.Correo == login.Correo && x.Estado == 'A' && x.Solicitud == 'A');
+
+
+			if (usuario == null || !BCrypt.Net.BCrypt.Verify(login.Contrasenia, usuario.Contrasenia))
+			{
+				return NotFound();
+			}
+
+			return Ok(new
+			{
+				id = usuario.Id,
+				name = usuario.Nombre,
+				role = usuario.Rol
+			});
+		}
+
+        [HttpGet("EstPoints/{idEst}")]
+        public async Task<IActionResult> GetPuntosAsync(uint idEst)
         {
-            // Buscar el usuario por correo
-            Usuario? usuario = _context.Usuarios.FirstOrDefault(x => x.Correo == login.Correo && x.Estado == 'A' && x.Solicitud == 'A');
-
-
-
-            if (usuario == null || !BCrypt.Net.BCrypt.Verify(login.Contrasenia, usuario.Contrasenia))
-            {
-                return NotFound();
-            }
+            var puntos = await _context.competencia
+                    .Join(_context.calificacion,
+                        competencia => competencia.Id,
+                        calificacion => calificacion.IdCompetencia,
+                        (competencia, calificacion) => new { Competencia = competencia, Calificacion = calificacion })
+                    .Where(c => c.Calificacion.IdEstudiante == idEst && c.Calificacion.Aprobado == 1)
+                    .SumAsync(c => c.Competencia.Puntos);
 
             return Ok(new
             {
-                id = usuario.Id,
-                name = usuario.Nombre,
-                role = usuario.Rol
+                puntos
             });
         }
-
 
         private bool UsuarioExists(uint id)
         {
             return _context.Usuarios.Any(e => e.Id == id);
         }
 
+		[HttpPost("RecuperarContrasenia")]
+		public async Task<IActionResult> RecuperarContrasenia([FromBody] RecuperaContrasenia request)
+		{
+			var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Correo == request.Correo && x.Estado == 'A' && x.Solicitud == 'A');
+			if (usuario == null)
+			{
+				return NotFound("Correo no registrado.");
+			}
+			var nuevaContrasenia = GenerarContraseniaSegura();
+			usuario.Contrasenia = HashPassword(nuevaContrasenia);
+			usuario.fecha_Actualizacion = DateTime.Now;
+			_context.Usuarios.Update(usuario);
+			await _context.SaveChangesAsync();
+			EnviarCorreo(request.Correo, nuevaContrasenia);
+			return Ok("Correo Enviado");
+		}
+		private string GenerarContraseniaSegura(int length = 8)
+		{
+			const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()";
+			StringBuilder res = new StringBuilder();
+			Random rnd = new Random();
+			while (0 < length--)
+			{
+				res.Append(valid[rnd.Next(valid.Length)]);
+			}
+			return res.ToString();
+		}
+		private void EnviarCorreo(string toEmail, string nuevaContrasenia)
+		{
+			var fromEmail = "foxbolivia.fbol@gmail.com";
+			var fromPassword = "qjuqxebmjhvcvtmr";
+			var smtpClient = new SmtpClient("smtp.gmail.com")
+			{
+				Port = 587,
+				Credentials = new NetworkCredential(fromEmail, fromPassword),
+				EnableSsl = true,
+			};
+			var mailMessage = new MailMessage
+			{
+				From = new MailAddress(fromEmail),
+				Subject = "Nueva Contraseña",
+				Body = $"Su nueva contraseña es: {nuevaContrasenia}",
+				IsBodyHtml = true,
+			};
+			mailMessage.To.Add(toEmail);
+			smtpClient.Send(mailMessage);
+		}
+		private string HashPassword(string password)
+		{
+			return BCrypt.Net.BCrypt.HashPassword(password);
+		}
 
-        ////RECUPERAR CONTRSEÑA
-        //[HttpPost("RecuperarContrasenia")]
-        //public async Task<IActionResult> RecuperarContrasenia([FromBody] RecuperaContrasenia request)
-        //{
-        //    var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Correo == request.Correo && x.Estado == 'A');
 
-        //    if (usuario == null)
-        //    {
-        //        return NotFound("Correo no registrado.");
-        //    }
-        //    var nuevaContrasenia = GenerarContraseniaSegura();
-        //    usuario.Contrasenia = HashPassword(nuevaContrasenia);
-        //    _context.Usuarios.Update(usuario);
-        //    await _context.SaveChangesAsync();
-        //    EnviarCorreo(request.Correo, nuevaContrasenia);
-        //    return Ok("Correo Enviado");
-        //}
-        [HttpPost("RecuperarContrasenia")]
-        public async Task<IActionResult> RecuperarContrasenia([FromBody] RecuperaContrasenia request)
+        [HttpPost("CambiarContrasenia")]
+        public async Task<IActionResult> CambiarContrasenia([FromBody] CambioContrasenia request)
         {
-            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Correo == request.Correo && x.Estado == 'A' && x.Solicitud=='A');
+            
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Correo == request.Correo && x.Estado == 'A' && x.Solicitud == 'A');
 
-            if (usuario == null)
+            if (usuario == null || !BCrypt.Net.BCrypt.Verify(request.ContraseniaActual, usuario.Contrasenia))
             {
-                return NotFound("Correo no registrado.");
+                return NotFound("Usuario no encontrado o contraseña actual incorrecta.");
             }
 
-            var nuevaContrasenia = GenerarContraseniaSegura();
-            usuario.Contrasenia = HashPassword(nuevaContrasenia);
-            usuario.fecha_Actualizacion = DateTime.Now; 
-            _context.Usuarios.Update(usuario);
-            await _context.SaveChangesAsync();
-            EnviarCorreo(request.Correo, nuevaContrasenia);
-            return Ok("Correo Enviado");
+            if (request.NuevaContrasenia.Length < 8 || !request.NuevaContrasenia.Any(char.IsDigit) || !request.NuevaContrasenia.Any(char.IsUpper))
+            {
+                return BadRequest("La nueva contraseña debe tener al menos 8 caracteres, incluyendo un número y una letra mayúscula.");
+            }
+
+            usuario.Contrasenia = HashPassword(request.NuevaContrasenia);
+            usuario.fecha_Actualizacion = DateTime.Now;
+
+            _context.Entry(usuario).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UsuarioExists(usuario.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return Ok("Contraseña actualizada");
         }
 
-        private string GenerarContraseniaSegura(int length = 8)
-        {
-            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()";
-            StringBuilder res = new StringBuilder();
-            Random rnd = new Random();
-            while (0 < length--)
-            {
-                res.Append(valid[rnd.Next(valid.Length)]);
-            }
-            return res.ToString();
-        }
-        private void EnviarCorreo(string toEmail, string nuevaContrasenia)
-        {
-            var fromEmail = "foxbolivia.fbol@gmail.com";
-            var fromPassword = "qjuqxebmjhvcvtmr";
-            var smtpClient = new SmtpClient("smtp.gmail.com")
-            {
-                Port = 587,
-                Credentials = new NetworkCredential(fromEmail, fromPassword),
-                EnableSsl = true,
-            };
-            var mailMessage = new MailMessage
-            {
-                From = new MailAddress(fromEmail),
-                Subject = "Nueva Contraseña",
-                Body = $"Su nueva contraseña es: {nuevaContrasenia}",
-                IsBodyHtml = true,
-            };
-            mailMessage.To.Add(toEmail);
-            smtpClient.Send(mailMessage);
-        }
-        private string HashPassword(string password)
-        {
-            return BCrypt.Net.BCrypt.HashPassword(password);
-        }
+
 
     }
+
 }
