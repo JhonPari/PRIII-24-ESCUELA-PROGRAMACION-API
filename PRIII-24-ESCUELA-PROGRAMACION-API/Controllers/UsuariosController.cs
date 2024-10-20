@@ -70,6 +70,31 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 
 			return Ok(reporteEstudiantes);
 		}
+		// GET: api/ReporteEstudiantesFecha
+		[HttpGet("EstudiantesReporteFecha")]
+		public async Task<ActionResult<IEnumerable<object>>> ReporteEstudiantesFecha()
+		{
+			var fechaLimite = DateTime.Now.AddMonths(-3);
+
+			var reporteEstudiantesFecha = await (from u in _context.Usuarios
+												 join cal in _context.calificacion on u.Id equals cal.IdEstudiante
+												 join cmp in _context.competencia on cal.IdCompetencia equals cmp.Id
+												 where u.Estado == 'A' && u.Rol == 'E'
+												 && cmp.Fecha_Inicio >= fechaLimite
+												 group new { cal, cmp } by new { u.Nombre, u.Correo, cmp.Fecha_Inicio } into estudianteGrupo
+												 select new
+												 {
+													 NombreUsuario = estudianteGrupo.Key.Nombre,
+													 CorreoUsuario = estudianteGrupo.Key.Correo,
+													 TotalPuntos = estudianteGrupo.Sum(e => e.cmp.Puntos),
+													 FechaInicioCompetencia = estudianteGrupo.Key.Fecha_Inicio // Sin formato
+												 }).ToListAsync();
+
+			return Ok(reporteEstudiantesFecha);
+		}
+
+
+
 
 
 		// GET: api/Usuarios/5
