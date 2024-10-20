@@ -87,16 +87,11 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 													 NombreUsuario = estudianteGrupo.Key.Nombre,
 													 CorreoUsuario = estudianteGrupo.Key.Correo,
 													 TotalPuntos = estudianteGrupo.Sum(e => e.cmp.Puntos),
-													 FechaInicioCompetencia = estudianteGrupo.Key.Fecha_Inicio // Sin formato
+													 FechaInicioCompetencia = estudianteGrupo.Key.Fecha_Inicio
 												 }).ToListAsync();
 
 			return Ok(reporteEstudiantesFecha);
 		}
-
-
-
-
-
 		// GET: api/Usuarios/5
 		[HttpGet("{id}")]
         public async Task<ActionResult<Usuario>> GetUsuario(uint id)
