@@ -303,5 +303,50 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 		{
 			return BCrypt.Net.BCrypt.HashPassword(password);
 		}
-	}
+
+
+        [HttpPost("CambiarContrasenia")]
+        public async Task<IActionResult> CambiarContrasenia([FromBody] CambioContrasenia request)
+        {
+            
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Correo == request.Correo && x.Estado == 'A' && x.Solicitud == 'A');
+
+            if (usuario == null || !BCrypt.Net.BCrypt.Verify(request.ContraseniaActual, usuario.Contrasenia))
+            {
+                return NotFound("Usuario no encontrado o contraseña actual incorrecta.");
+            }
+
+            if (request.NuevaContrasenia.Length < 8 || !request.NuevaContrasenia.Any(char.IsDigit) || !request.NuevaContrasenia.Any(char.IsUpper))
+            {
+                return BadRequest("La nueva contraseña debe tener al menos 8 caracteres, incluyendo un número y una letra mayúscula.");
+            }
+
+            usuario.Contrasenia = HashPassword(request.NuevaContrasenia);
+            usuario.fecha_Actualizacion = DateTime.Now;
+
+            _context.Entry(usuario).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UsuarioExists(usuario.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return Ok("Contraseña actualizada");
+        }
+
+
+
+    }
+
 }
