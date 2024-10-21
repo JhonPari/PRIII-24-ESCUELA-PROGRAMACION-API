@@ -30,7 +30,9 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
                                           Titulo = c.Titulo,
                                           Fecha_Inicio = c.Fecha_Inicio,
                                           Fecha_Fin = c.Fecha_Fin,
-                                          Estado = c.Estado
+                                          Estado = c.Estado,
+                                          Imagen = ca.Imagen,
+                                          Revisado = ca.Aprobado
                                       })
                                       .OrderByDescending(c => hoy >= c.Fecha_Inicio && hoy <= c.Fecha_Fin)
                                       .ThenBy(c => c.Fecha_Inicio >= hoy ? c.Fecha_Inicio : DateTime.MaxValue)
