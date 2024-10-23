@@ -56,19 +56,20 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 		[HttpGet("EstudiantesReporte")]
 		public async Task<ActionResult<IEnumerable<object>>> GetEstudiantesReporte()
 		{
-			var reporteEstudiantes = await (from u in _context.Usuarios
-											join cal in _context.calificacion on u.Id equals cal.IdEstudiante
-											join cmp in _context.competencia on cal.IdCompetencia equals cmp.Id
-											where u.Estado == 'A' && u.Rol == 'E'
-											group cmp by new { u.Nombre, u.Correo } into estudianteGrupo
-											select new
-											{
-												Nombre_Estudiante = estudianteGrupo.Key.Nombre,
-												Correo_Estudiante = estudianteGrupo.Key.Correo,
-												Total_Puntos = estudianteGrupo.Sum(cmp => cmp.Puntos)
-											}).ToListAsync();
+			var resultados = await (from u in _context.Usuarios
+							  where u.Estado == 'A' && u.Rol == 'E'
+							  join ca in _context.calificacion on u.Id equals ca.IdEstudiante
+							  join c in _context.competencia on ca.IdCompetencia equals c.Id
+							  group new { c, ca } by new { u.Nombre, u.Correo } into g
+							  select new
+							  {
+								  Nombre_Estudiante = g.Key.Nombre,
+								  Correo_Estudiante = g.Key.Correo,
+								  Total_Puntos = g.Where(x => x.ca != null && x.ca.Aprobado == 1)
+												 .Sum(x => x.c != null ? x.c.Puntos : 0)
+							  }).ToListAsync();
 
-			return Ok(reporteEstudiantes);
+			return Ok(resultados);
 		}
 		// GET: api/ReporteEstudiantesFecha
 		[HttpGet("EstudiantesReporteFecha")]
@@ -86,9 +87,10 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 												 {
 													 NombreUsuario = estudianteGrupo.Key.Nombre,
 													 CorreoUsuario = estudianteGrupo.Key.Correo,
-													 TotalPuntos = estudianteGrupo.Sum(e => e.cmp.Puntos),
+													 TotalPuntos = estudianteGrupo.Sum(e => e.cal.Aprobado == 1 ? e.cmp.Puntos : 0),
 													 FechaInicioCompetencia = estudianteGrupo.Key.Fecha_Inicio
 												 }).ToListAsync();
+
 
 			return Ok(reporteEstudiantesFecha);
 		}

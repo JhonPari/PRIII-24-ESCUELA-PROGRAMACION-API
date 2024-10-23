@@ -2,7 +2,7 @@
 {
     public class CompetenciaEst
     {
-        public int Id { get; set; }
+        public UInt32 Id { get; set; }
         public string Titulo { get; set; }
         public DateTime Fecha_Inicio { get; set; }
         public DateTime Fecha_Fin { get; set; }
