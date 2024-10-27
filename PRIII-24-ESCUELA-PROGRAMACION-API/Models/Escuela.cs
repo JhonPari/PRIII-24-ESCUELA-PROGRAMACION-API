@@ -9,7 +9,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public UInt32 Id { get; set; }
 
         [Required]
         public string Nombre { get; set; }

@@ -8,7 +8,8 @@
         public UInt16 Puntos { get; set; }
         public DateTime Fecha_Inicio { get; set; }
         public DateTime Fecha_Fin { get; set; }
-        public char Estado { get; set; }
+		public UInt32 IdEscuela { get; set; }
+		public char Estado { get; set; }
         public ICollection<Calificacion> Calificaciones { get; set; }
     }
 

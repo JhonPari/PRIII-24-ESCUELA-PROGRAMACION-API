@@ -94,6 +94,28 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 
 			return Ok(reporteEstudiantesFecha);
 		}
+		// GET: api/ReporteEscuela
+		[HttpGet("EscuelasReporte")]
+		public async Task<ActionResult<IEnumerable<object>>> GetEscuelasReporte()
+		{
+			var resultados = await (from competencia in _context.competencia
+									join escuela in _context.escuela on competencia.IdEscuela equals escuela.Id into escuelaGroup
+									from escuela in escuelaGroup.DefaultIfEmpty() // LEFT JOIN
+									join calificacion in _context.calificacion on competencia.Id equals calificacion.IdCompetencia into calificacionGroup
+									from calificacion in calificacionGroup.DefaultIfEmpty() // LEFT JOIN
+									join usuario in _context.Usuarios on calificacion.IdEstudiante equals usuario.Id into usuarioGroup
+									from usuario in usuarioGroup.DefaultIfEmpty() // LEFT JOIN
+									where usuario.Rol == 'E' && usuario.Estado == 'A'
+									select new
+									{
+										NombreEscuela = escuela != null ? escuela.Nombre : "Sin Escuela",
+										TituloCompetencia = competencia.Titulo,
+										NombreEstudiante = usuario != null ? usuario.Nombre : "Sin Estudiante",
+										CorreoEstudiante = usuario != null ? usuario.Correo : "Sin Correo"
+									}).ToListAsync();
+
+			return Ok(resultados);
+		}
 		// GET: api/Usuarios/5
 		[HttpGet("{id}")]
         public async Task<ActionResult<Usuario>> GetUsuario(uint id)
