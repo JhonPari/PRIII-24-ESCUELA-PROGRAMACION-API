@@ -96,7 +96,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 
             if (emailExists)
             {
-                return Conflict(new { message = "Correo en uso" });
+                return Conflict(new { message = "Correo en uso" }); 
             }
 
             usuario.fecha_Registro = DateTime.Now;
@@ -367,7 +367,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
         [HttpGet("Inhabilitados")]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuariosEstadoE()
         {
-            return await _context.Usuarios.Where(x => x.Estado == 'E').ToListAsync();
+            return await _context.Usuarios.Where(x => x.Estado == 'I').ToListAsync();
         }
 
         // cambia del estado de E a A para voler habilitarlo 
@@ -379,9 +379,9 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             {
                 return NotFound("Usuario no encontrado.");
             }
-            if (usuario.Estado != 'E')
+            if (usuario.Estado != 'I')
             {
-                return BadRequest("El estado es diferente a E");
+                return BadRequest("El estado es diferente a I");
             }
             usuario.Estado = 'A';
             usuario.fecha_Actualizacion = DateTime.Now;
