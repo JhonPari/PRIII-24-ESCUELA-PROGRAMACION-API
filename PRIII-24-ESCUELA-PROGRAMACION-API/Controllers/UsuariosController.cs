@@ -90,11 +90,26 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
         [HttpPost]
         public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
+            // Verificar si ya existe un usuario con el mismo correo
+            bool emailExists = await _context.Usuarios
+                .AnyAsync(u => u.Correo == usuario.Correo);
+
+            if (emailExists)
+            {
+                return Conflict(new { message = "Correo en uso" });
+            }
+
             usuario.fecha_Registro = DateTime.Now;
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetUsuario), new { id = usuario.Id }, usuario);
+
+            //usuario.fecha_Registro = DateTime.Now;
+            //_context.Usuarios.Add(usuario);
+            //await _context.SaveChangesAsync();
+
+            //return CreatedAtAction(nameof(GetUsuario), new { id = usuario.Id }, usuario);
         }
 
         // PUT: api/Usuarios/5
@@ -163,7 +178,7 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 
 			return Ok();
 		}
-		// DELETE: api/Usuario/5
+		// DELETE LOGICO: api/Usuario/5
 		[HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(uint id)
         {
@@ -188,15 +203,38 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
 
             return Ok();
         }
+        
+        // DELETE FISICO
+        [HttpDelete("eliminar/{id}")]
+        public async Task<IActionResult> DeleteFisic(uint id)
+        {
+            
+            Usuario? usuario = await _context.Usuarios.FindAsync(id);
 
-        // PUT: api/Usuarios/5
-		[HttpPost("Login")]
+            if (usuario == null)
+            {
+                return NotFound(); 
+            }
+
+            _context.Usuarios.Remove(usuario);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw; 
+            }
+
+            return Ok(); 
+        }
+
+        // LOGIN
+        [HttpPost("Login")]
 		public async Task<IActionResult> Login(LoginRequest login)
 		{
-			// Buscar el usuario por correo
-			Usuario? usuario = _context.Usuarios.FirstOrDefault(x => x.Correo == login.Correo && x.Estado == 'A' && x.Solicitud == 'A');
-
-
+	    	Usuario? usuario = _context.Usuarios.FirstOrDefault(x => x.Correo == login.Correo && x.Estado == 'A' && x.Solicitud == 'A');
 			if (usuario == null || !BCrypt.Net.BCrypt.Verify(login.Contrasenia, usuario.Contrasenia))
 			{
 				return NotFound();
@@ -325,6 +363,48 @@ namespace PRIII_24_ESCUELA_PROGRAMACION_API.Controllers
             return Ok("Contraseña actualizada");
         }
 
+        // GET a los que estan inhabilitados
+        [HttpGet("Inhabilitados")]
+        public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuariosEstadoE()
+        {
+            return await _context.Usuarios.Where(x => x.Estado == 'E').ToListAsync();
+        }
+
+        // cambia del estado de E a A para voler habilitarlo 
+        [HttpPut("CambiarEstadoA/{id}")]
+        public async Task<IActionResult> CambiarEstadoEA(uint id)
+        {
+            var usuario = await _context.Usuarios.FindAsync(id);
+            if (usuario == null)
+            {
+                return NotFound("Usuario no encontrado.");
+            }
+            if (usuario.Estado != 'E')
+            {
+                return BadRequest("El estado es diferente a E");
+            }
+            usuario.Estado = 'A';
+            usuario.fecha_Actualizacion = DateTime.Now;
+            _context.Entry(usuario).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UsuarioExists(id))
+                {
+                    return NotFound("No se encontro");
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return Ok();
+        }
 
 
     }

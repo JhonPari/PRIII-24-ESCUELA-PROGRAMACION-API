@@ -7,12 +7,15 @@
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\calificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\calificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\KAREN\\Downloads\\ARogue_Ligue-main\\Assets\\01_Scripts\\MyCamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\proyecto 3\\api2\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\calificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\calificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +41,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyCamera.cs",
+              "DocumentMoniker": "C:\\Users\\KAREN\\Downloads\\ARogue_Ligue-main\\Assets\\01_Scripts\\MyCamera.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Users\\KAREN\\Downloads\\ARogue_Ligue-main\\Assets\\01_Scripts\\MyCamera.cs",
+              "ToolTip": "C:\\Users\\KAREN\\Downloads\\ARogue_Ligue-main\\Assets\\01_Scripts\\MyCamera.cs",
+              "RelativeToolTip": "..\\..\\..\\Users\\KAREN\\Downloads\\ARogue_Ligue-main\\Assets\\01_Scripts\\MyCamera.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T16:57:14.949Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
               "ToolTip": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
-              "ViewState": "AQIAACIBAAAAAAAAAAAqwEQBAAAtAAAA",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAwwGIAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T14:53:48.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Calificacion.cs",
               "DocumentMoniker": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Calificacion.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Calificacion.cs",
@@ -59,12 +74,11 @@
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Calificacion.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T14:38:17.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T14:38:17.984Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Proyecto 3\\Api2\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\appsettings.json",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\appsettings.json",
@@ -72,7 +86,8 @@
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-20T14:38:03.281Z"
+              "WhenOpened": "2024-10-20T14:38:03.281Z",
+              "EditorCaption": ""
             }
           ]
         },
