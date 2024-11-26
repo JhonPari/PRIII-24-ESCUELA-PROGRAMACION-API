@@ -2,45 +2,52 @@ using Microsoft.EntityFrameworkCore;
 using PRIII_24_ESCUELA_PROGRAMACION_API.Data;
 
 var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(args);
+
+// Obtener la cadena de conexión de configuración
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// Add services to the container.
+// Agregar DbContext para conectar a la base de datos MySQL
 builder.Services.AddDbContext<DbEscuelasContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+	options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
-// Add CORS services
+// Agregar soporte para CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllOrigins",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader();
-        });
+	options.AddPolicy("AllowAllOrigins",
+		builder =>
+		{
+			builder.AllowAnyOrigin()
+				   .AllowAnyMethod()
+				   .AllowAnyHeader();
+		});
 });
 
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Configuración de Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configurar el pipeline de solicitudes HTTP
 if (app.Environment.IsDevelopment())
 {
+	// Habilitar Swagger solo en entorno de desarrollo
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Desactivar la redirección HTTPS en desarrollo
+// Elimina la llamada a app.UseHttpsRedirection() si no estás usando HTTPS
+if (!app.Environment.IsDevelopment())
+{
+	// Si no estás en desarrollo, habilitar HTTPS en producción
+	app.UseHttpsRedirection();
+}
 
-app.UseCors("AllowAllOrigins");
+app.UseCors("AllowAllOrigins"); // Habilitar CORS
+app.UseAuthorization(); // Activar autorización
 
-app.UseAuthorization();
+app.MapControllers(); // Mapear los controladores
 
-app.MapControllers();
-
-app.Run();
+app.Run(); // Ejecutar la aplicación

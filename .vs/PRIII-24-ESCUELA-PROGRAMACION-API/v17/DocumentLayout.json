@@ -1,65 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\",
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\others\\cambiocontrasenia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\others\\cambiocontrasenia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\controllers\\calificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\controllers\\calificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\controllers\\calificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\others\\imagenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\others\\cambiocontrasenia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\others\\cambiocontrasenia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\others\\imagenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\others\\imagenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\calificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\calificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\calificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\controllers\\competenciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\controllers\\competenciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\controllers\\competenciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\others\\calificacioncompetencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\others\\calificacioncompetencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\others\\calificacioncompetencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\diego\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\data\\dbescuelascontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|c:\\users\\asus\\documents\\github\\priii-24-escuela-programacion-api\\priii-24-escuela-programacion-api\\data\\dbescuelascontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{625B13BF-23BB-4EA2-AC08-83F3E8C6C63A}|PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj|solutionrelative:priii-24-escuela-programacion-api\\data\\dbescuelascontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -70,11 +70,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -98,78 +102,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PRIII-24-ESCUELA-PROGRAMACION-API",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj",
+              "DocumentIndex": 5,
+              "Title": "PRIII-24-ESCUELA-PROGRAMACION-API.csproj",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-20T23:57:52.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T23:57:52.025Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Program.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Program.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Program.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABYAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-08T19:43:03.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\UsuariosController.cs",
               "ViewState": "AgIAACUBAAAAAAAAAAASwDQBAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T19:48:57.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-08T19:48:57.572Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\appsettings.json",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\appsettings.json",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\appsettings.json",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-09-08T19:18:48.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CambioContrasenia.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CambioContrasenia.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CambioContrasenia.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CambioContrasenia.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CambioContrasenia.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CambioContrasenia.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CambioContrasenia.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T00:05:02.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T00:05:02.538Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "CalificacionController.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CalificacionController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CalificacionController.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CalificacionController.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CalificacionController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CalificacionController.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CalificacionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAowBAAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T12:36:39.387Z",
               "EditorCaption": ""
@@ -178,9 +179,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "ImagesController.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\ImagesController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\ImagesController.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\ImagesController.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\ImagesController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\ImagesController.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\ImagesController.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAAAE8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -190,9 +191,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "Calificacion.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Calificacion.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Calificacion.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Calificacion.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Calificacion.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Calificacion.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Calificacion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -200,24 +201,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Properties\\launchSettings.json",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-10T22:01:09.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-10T22:01:09.963Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "CompetenciasController.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CompetenciasController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CompetenciasController.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CompetenciasController.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CompetenciasController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CompetenciasController.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Controllers\\CompetenciasController.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAAAD0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -227,9 +227,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Imagen.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Imagen.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Imagen.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Imagen.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Imagen.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Imagen.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Imagen.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -239,9 +239,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "ImagenResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\ImagenResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\ImagenResponse.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\ImagenResponse.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\ImagenResponse.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\ImagenResponse.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\ImagenResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -251,9 +251,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "CalificacionCompetencia.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CalificacionCompetencia.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CalificacionCompetencia.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CalificacionCompetencia.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CalificacionCompetencia.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CalificacionCompetencia.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Others\\CalificacionCompetencia.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -263,9 +263,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "DbEscuelasContext.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Data\\DbEscuelasContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Data\\DbEscuelasContext.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Data\\DbEscuelasContext.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Data\\DbEscuelasContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Data\\DbEscuelasContext.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Data\\DbEscuelasContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -275,9 +275,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\Diego\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\PRIII-24-ESCUELA-PROGRAMACION-API\\PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Usuario.cs",
               "RelativeToolTip": "PRIII-24-ESCUELA-PROGRAMACION-API\\Models\\Usuario.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAIwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
